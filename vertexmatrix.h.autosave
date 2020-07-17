@@ -1,0 +1,16 @@
+#ifndef VERTEXMATRIX_H
+#define VERTEXMATRIX_H
+
+#include "matrix.h"
+
+class Vertex
+{
+    int x;
+    int y;
+    int z;
+public:
+    Vertex(int x, int y, int z);
+    Vertex();
+};
+
+#endif // VERTEXMATRIX_H

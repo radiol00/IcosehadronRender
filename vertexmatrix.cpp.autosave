@@ -1,0 +1,33 @@
+#include "vertexmatrix.h"
+
+Vertex::Vertex(int xv, int yv, int zv)
+{
+   x = xv;
+   y = yv;
+   z = zv;
+   Matrix<double> m(4,1);
+
+   m.put(0,0,x);
+   m.put(1,0,y);
+   m.put(2,0,z);
+   m.put(3,0,1);
+
+   VM = m;
+}
+
+VertexMatrix::VertexMatrix()
+{
+   Matrix<double> m(4,1);
+
+   m.put(0,0,0);
+   m.put(1,0,0);
+   m.put(2,0,0);
+   m.put(3,0,1);
+
+   VM = m;
+}
+
+Matrix<double> VertexMatrix::getPoint()
+{
+    return VM;
+}
